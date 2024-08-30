@@ -1,4 +1,4 @@
-/* Header =========================================== */
+/* Nulifier ============================== */
 * {
     margin: 0;
     padding: 0;
@@ -6,27 +6,20 @@
 }
 
 body {
-    background: url("../images/Path.png") no-repeat top center;
-    background-position: right top;
-    font-family: Arial, sans-serif;
+    font-family: "Roboto", sans-serif;
     position: relative;
-    overflow-x: hidden; 
-    margin: 0; 
+    margin: 0;
+    box-sizing: border-box;
 }
 
-.overlay-image {
-    position: absolute;
-    bottom: 95%;
-    left: 90%;
-    transform: translateX(-50%);
-    z-index: 9999;
-    width: 974.86px;
-    height: 100px;
-    background-size: cover;
+.container {
+    position: relative;
+    max-width: 1110px;
+    margin: 0 auto;
 }
 
+/* Header ==================================== */
 .header {
-    color: #ffffff;
     padding: 20px 0;
 }
 
@@ -34,57 +27,8 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
 }
 
-
-/* Intro */
-.header__intro {
-    color: #091133;
-    width: 40%;
-    word-wrap: break-word;
-    margin-top: 301px;
-    flex-wrap: wrap;
-    margin-left: 200px;
-    font-size: 60px;
-    line-height: 80px;
-    font-family: 'Medium' sans-serif;
-}
-
-
-.header__text {
-    width: 540px;
-    height: 204px;
-    font-family: 'Regular' sans-serif;
-    font-size: 18px;
-    margin-left: 200px;
-    line-height: 30px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    color: #505F98;
-}
-
-.header__text__two {
-    margin-top: -79px;
-    font-family: 'Regular' sans-serif;
-    font-size: 18px;
-    width: 30%;
-    margin-left: 295px;
-    height: 164px;
-    line-height: 30px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    color: #505F98;
-}
-
-
-/* Nav =========================================== */
 .nav ul {
     list-style: none;
     display: flex;
@@ -108,7 +52,7 @@ body {
 }
 
 .header__logo:hover {
-    color: #000000;
+    color: #111B47;
 }
 
 .header__button {
@@ -127,6 +71,72 @@ body {
     transition: 0.1s ease-in;
     overflow: hidden;
 }
+
+/* Intro ================================================ */
+.intro {
+    padding: 100px 0;
+    position: relative;
+    overflow-x: hidden;
+
+    /* &::after {
+        content: '';
+        position: absolute;
+        top: -60px;
+        right: -480px;
+        width: 1490px;
+        height: 1160px;
+        background: url("../images/intro-bg.png") no-repeat center;
+        
+    } */
+}
+
+.intro__info {
+    max-width: 540px;
+}
+
+.intro__title {
+    font-weight: 500;
+    font-size: 50px;
+    line-height: 66px;
+    letter-spacing: 1px;
+    color: #091133;
+}
+
+.intro__text {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 30px;
+    color: #505F98;
+    margin: 20px 0 70px;
+}
+
+.intro__buttons {
+    display: flex;
+    align-items: center;
+    column-gap: 30px;
+}
+
+.intro__btn {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 26px;
+    text-align: center;
+    color: #091133;
+    border: 2px solid #091133;
+    border-radius: 2px;
+    background-color: transparent;
+    cursor: pointer;
+    width: 180px;
+    padding: 5px;
+    display: block;
+}
+
+.intro__btn.blue {
+    background: #111B47;
+    color: #fff;
+}
+
+
 
 .main-content {
     text-align: center;
@@ -158,7 +168,8 @@ body {
     gap: 10px;
 }
 
-.main-content__btn, .main-content__btn__two {
+.main-content__btn,
+.main-content__btn__two {
     background: #007bff;
     color: #fff;
     border: none;
@@ -213,15 +224,6 @@ body {
     min-height: 100vh;
 }
 
-.container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    max-width: 1400px;
-    width: 100%;
-    margin: 0 auto;
-}
-
 .text {
     margin-bottom: -160px;
     flex: 1;
@@ -267,29 +269,24 @@ body {
 
 
 /* Reklama =========================================== */
-.reklama {
+.advert {
     margin-top: 25%;
 }
 
-.container {
-    width: 1440px;
-    /* height: 569px; */
-}
-
-.reklama__img {
+.advert__img {
     width: 480px;
     height: 315.85px;
     margin-right: 155px;
 }
 
-.reklama__container {
+.advert__container {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     margin-left: 80px;
 }
 
-.reklama__text {
+.advert__text {
     margin-bottom: 20px;
     color: #091133;
     line-height: 48px;
@@ -297,7 +294,7 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
-.reklama__p {
+.advert__p {
     width: 445px;
     height: 166px;
     line-height: 26px;
